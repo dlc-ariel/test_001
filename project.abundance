@@ -7,8 +7,79 @@
     "ioValues": [],
     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
     "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
+    "allAtoms": [
+        {
+            "atomType": "Output",
+            "name": "Output",
+            "x": 0.98,
+            "y": 0.5,
+            "uniqueID": 1744212307606,
+            "ioValues": [],
+            "description": "Connect geometry here to make it available in the next level up. "
+        },
+        {
+            "atomType": "Intersection",
+            "name": "Intersection",
+            "x": 0.24192439862542953,
+            "y": 0.3422459893048128,
+            "uniqueID": 1744212350469,
+            "ioValues": [
+                {
+                    "name": "geometry1",
+                    "ioValue": 1744212395447
+                },
+                {
+                    "name": "geometry2",
+                    "ioValue": ""
+                }
+            ],
+            "description": "The space shared by two shapes."
+        },
+        {
+            "atomType": "Circle",
+            "name": "Circle",
+            "x": 0.14364261168384881,
+            "y": 0.4893048128342246,
+            "uniqueID": 1744212395447,
+            "ioValues": [
+                {
+                    "name": "diameter",
+                    "ioValue": 10
+                }
+            ],
+            "description": "Creates a new circle."
+        },
+        {
+            "atomType": "Circle",
+            "name": "Circle",
+            "x": 0.3305841924398626,
+            "y": 0.5294117647058824,
+            "uniqueID": 1744212435189,
+            "ioValues": [
+                {
+                    "name": "diameter",
+                    "ioValue": 1744212395447
+                }
+            ],
+            "description": "Creates a new circle."
+        }
+    ],
+    "allConnectors": [
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry1",
+            "ap2Primary": false,
+            "ap1ID": 1744212395447,
+            "ap2ID": 1744212350469
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "diameter",
+            "ap2Primary": false,
+            "ap1ID": 1744212395447,
+            "ap2ID": 1744212435189
+        }
+    ],
     "unitsKey": "Inches",
     "fileTypeVersion": 1,
     "compiledBom": {},
